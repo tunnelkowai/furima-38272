@@ -36,7 +36,7 @@
 ### Association
 
 - belongs_to :user
-- has_one    :orders
+- has_one    :order
 - belongs_to :category
 - belongs_to :condition
 - belongs_to :postage
