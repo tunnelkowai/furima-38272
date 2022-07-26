@@ -21,22 +21,27 @@
 
 ## items テーブル
 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| title         | string     | null: false                    |
-| description   | text       | null: false                    |
-| category      | string     | null: false                    |
-| condition     | string     | null: false                    |
-| postage       | string     | null: false                    |
-| shipping_area | string     | null: false                    |
-| days_to_ship  | string     | null: false                    |
-| price         | integer    | null: false                    |
-| user          | references | null: false, foreign_key: true |
+| Column          | Type       | Options                        |
+| --------------- | ---------- | ------------------------------ |
+| title           | string     | null: false                    |
+| description     | text       | null: false                    |
+| price           | integer    | null: false                    |
+| user            | references | null: false, foreign_key: true |
+| category_id     | integer    | null: false                    |
+| condition_id    | integer    | null: false                    |
+| postage_id      | integer    | null: false                    |
+| prefecture_id   | integer    | null: false                    |
+| days_to_ship_id | integer    | null: false                    |
 
 ### Association
 
 - belongs_to :user
 - has_one    :orders
+- belongs_to :category
+- belongs_to :condition
+- belongs_to :postage
+- belongs_to :prefectures
+- belongs_to :days_to_ship
 
 
 ## orders テーブル
