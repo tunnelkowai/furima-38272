@@ -10,8 +10,6 @@ class OrderAddress
     validates :municipalities, presence: true
     validates :address,        presence: true
     validates :phone_number,   presence: true, format: { with: /\A[0-9]{10,}\z/, message: "is too short" }
-    validates :phone_number,   format: { with: /\A[0-9]{,11}\z/ }
-    validates :phone_number,   numericality: { message: "is invalid. Input only number" }
 
   def save
     order = Order.create(user_id: user_id, item_id: item_id)
