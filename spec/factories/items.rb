@@ -6,7 +6,7 @@ FactoryBot.define do
     end
     title { Faker::Name.name }
     description { Faker::Lorem.sentence }
-    category_id { Faker::Number.between(from: 2, to: 12) }
+    category_id { Faker::Number.between(from: 2, to: 11) }
     condition_id { Faker::Number.between(from: 2, to: 7) }
     postage_id { Faker::Number.between(from: 2, to: 3) }
     prefecture_id { Faker::Number.between(from: 2, to: 48) }
